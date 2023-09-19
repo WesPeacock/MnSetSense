@@ -73,7 +73,7 @@ Edit the **MmSetSense.ini** file and choose values for the following lines:
 FwdataIn=FwProject-before.fwdata
 FwdataOut=FwProject.fwdata
 MnSenseMarker=mnsn
-LogFile=MnSetSense.log
+LogFile=MnSetSense-log.txt
 ````
 Names of the items are on the right hand side of the equals sign. Don't put any spaces before or after the name.
 

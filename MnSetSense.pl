@@ -31,7 +31,7 @@ use Config::Tiny;
  # FwdataIn=FwProject-before.fwdata
  # FwdataOut=FwProject.fwdata
  # MnSenseMarker=mnsn
- # LogFile=MnSetSense.log
+ # LogFile=MnSetSense-log.txt
 
 my $config = Config::Tiny->read($configfile, 'crlf');
 
@@ -47,9 +47,7 @@ Don't run $0 when FW is running.\
 Run it on a copy of the project, not the original!\
 I'm quitting" if -f $lockfile ;
 
-
 open(LOGFILE, '>:encoding(UTF-8)', "$logfilename");
-
 
 say STDERR "config:". Dumper($config) if $checkini;
 
