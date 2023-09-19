@@ -91,7 +91,7 @@ In **WSL**, type:
 
 ​	**./MnSetSense.pl** 
 
-That script produces a log file with a list of all the entries that have been changed, and the changes that have been made. The user should review the changes for correctness and make the changes in the FLEx project, or make the changes in the SFM file and re-impport the file.
+That script produces a log file with a list of all the entries that have been changed, and the changes that have been made. The user should review the changes for correctness and make the changes in the FLEx project, or make the changes in the SFM file and re-import the file.
 
 #### Run FLEx to check your results
 
