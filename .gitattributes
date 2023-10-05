@@ -3,9 +3,12 @@
 
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
-*.pl text
 *.ini text
 *.md text
+
+# Files with shebangs should not have crlfs
+*.pl text eol=lf
+*.sh text eol=lf
 
 # Declare files that will always have CRLF line endings on checkout.
 # *.sln text eol=crlf
