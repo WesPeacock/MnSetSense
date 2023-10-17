@@ -38,15 +38,27 @@ A simple SFM file for the Piglatin to English versions of the entries might look
 \ge hunt
 \de to find or search for an animal in the wild with the intention of killing the animal
 ````
-This file would be processed to set up the multiple \mn entries in "molehunt." The first main reference is set up move the sense number into a separate field. The second one is set up to make it a lexical reference that can be processed in by the Xrf2Cmpnt script:
+This file would be processed to set up the multiple \mn entries in "molehunt." 
+
+The 2nd \mn entry will be processed by the *mn2xref.pl* script to be a lf / lv pair where the lf marker will contain the sense # if any and the order of the main reference.
+
+The first main reference is set up move the sense number into a separate field
+That can be done with a one-line script like this:
+
+````bash
+perl -pE 's/(\\mn )(.*?)( [0-9]+)$/$1$2\n\\mnsn$3/'  <Dictionary-mn2xref.sfm >Dictionary-mn2xref-addmnsn.db
+````
+
+A subsequent script, *mn2xref.pl*, will process the 2nd mn reference.
+
+
 ````SFM
 \lx olehuntmay
 \mn olemay
 \mnsn 2
-\lf EC-2
+\lf EC-2 
 \lv unthay
 ````
-
 Once this file has been set up and imported, the script can be run. It will set the first component reference to from the entry "mole" the 2nd sense of "mole 2" rather than the entry itself.
 ### Preparation
 #### Infrastructure
