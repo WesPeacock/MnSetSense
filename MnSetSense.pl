@@ -64,7 +64,7 @@ say LOGFILE "Searching $infilename for entries containing \\", $mnsensemkr, ", f
 say LOGFILE '';
 my $mnsncount = 0;
 foreach my $sertnode (@mnsnentry) {
-	print LOGFILE "Examining Complex Form: ", displaylexentstring($sertnode);
+	print LOGFILE "\nExamining Complex Form: ", displaylexentstring($sertnode);
 	my $ImportResText = ($sertnode->findnodes('./ImportResidue/Str'))[0]->to_literal();
 	$ImportResText =~ s/\n//g;
 	say LOGFILE " ResidueText:", $ImportResText;
